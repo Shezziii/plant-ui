@@ -441,12 +441,12 @@ footer li.nav-item {
 .btn-primary {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  color: var(--dark-color);
+  color: white;
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: var(--dark-color);
-  border-color: var(--dark-color);
+  color: #6dad84;
+  background-color: white;
+  border-color:#6dad84;
 }
 .btn-outline-primary {
   color: var(--accent-color);
