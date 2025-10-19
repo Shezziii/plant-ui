@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlantLover - Landscaping and Gardening Bootstrap 5 HTML Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      
+      .whatsapp-float:hover {
+        background-color: #128C7E;
+        transform: scale(1.1);
+      }
+      
+      .contact-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .contact-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: #e8f5e9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 24px;
+        color: #4caf50;
+      }
+    </style>
+    
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#header-nav">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Menu</title>
+        <path fill="currentColor" d="M4 7v2h24V7zm0 8v2h24v-2zm0 8v2h24v-2z"/>
+      </symbol>
+      <symbol id="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Close</title>
+        <path fill="currentColor" d="M7.219 5.781L5.78 7.22L14.563 16L5.78 24.781l1.44 1.439L16 17.437l8.781 8.782l1.438-1.438L17.437 16l8.782-8.781L24.78 5.78L16 14.563z"/>
+      </symbol>
+      <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Search</title>
+        <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+      </symbol>
+      <symbol id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>User</title>
+        <path fill="currentColor" d="M16 5c-3.855 0-7 3.145-7 7c0 2.41 1.23 4.55 3.094 5.813C8.527 19.343 6 22.883 6 27h2c0-4.43 3.57-8 8-8s8 3.57 8 8h2c0-4.117-2.527-7.656-6.094-9.188A7.024 7.024 0 0 0 23 12c0-3.855-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5s-5-2.227-5-5s2.227-5 5-5z" />
+      </symbol>
+      <symbol id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Like</title>
+        <path fill="currentColor" d="M9.5 5C5.363 5 2 8.402 2 12.5c0 1.43.648 2.668 1.25 3.563a9.25 9.25 0 0 0 1.219 1.468L15.28 28.375l.719.719l.719-.719L27.53 17.531S30 15.355 30 12.5C30 8.402 26.637 5 22.5 5c-3.434 0-5.645 2.066-6.5 2.938C15.145 7.066 12.934 5 9.5 5zm0 2c2.988 0 5.75 2.906 5.75 2.906l.75.844l.75-.844S19.512 7 22.5 7c3.043 0 5.5 2.496 5.5 5.5c0 1.543-1.875 3.625-1.875 3.625L16 26.25L5.875 16.125s-.484-.465-.969-1.188C4.422 14.216 4 13.274 4 12.5C4 9.496 6.457 7 9.5 7z" />
+      </symbol>
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Shopping Cart</title>
+        <path fill="currentColor" d="M16 3c-2.746 0-5 2.254-5 5v1H6.062L6 9.938l-1 18L4.937 29h22.125L27 27.937l-1-18L25.937 9H21V8c0-2.746-2.254-5-5-5zm0 2a3 3 0 0 1 3 3v1h-6V8a3 3 0 0 1 3-3zm-8.063 6H11v3h2v-3h6v3h2v-3h3.063l.875 16H7.063z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="whatsapp" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52c.149-.174.198-.298.298-.497c.099-.198.05-.371-.025-.52c-.075-.149-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51c-.173-.008-.371-.01-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413c.248-.694.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="phone" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="email" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="location" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5z"/>
+      </symbol>
+    </svg>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+      <svg width="32" height="32"><use xlink:href="#whatsapp" /></svg>
+    </a>
+
+    <header id="header-wrap" class="align-items-center position-sticky top-0 bg-white px-3">
+
+      <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+          <div class="col-md-3">
+            <div class="main-logo">
+              <a href="index.html">
+                <img src="images/main-logo.png" alt="main-logo">
+              </a>
+            </div>
+          </div>
+
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><svg class="menu" width="24" height="24"><use xlink:href="#menu" /></svg></button>
+          
+          <!-- off canvas -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body justify-content-end">
+
+              <div class="col-md-6">
+                <ul id="header-nav" class="navbar-nav justify-content-center d-flex flex-grow-1 list-unstyled text-uppercase">
+                  <li class="nav-item pe-5">
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#about" class="nav-link">About</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#popular-products" class="nav-link">Shop</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#recent-collections" class="nav-link">Collection</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#latest-blog" class="nav-link">Blogs</a>
+                  </li>
+                  <li class="nav-item pe-5">
+                    <a href="#contact" class="nav-link">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- / off canvas -->
+
+          <div class="col-md-3">
+            <div class="right-block d-flex justify-content-end">
+              <div id="search-bar" class="border-right me-2 pe-1">
+                <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="What're we looking for ?">
+                <button type="submit">
+                  <svg class="search" width="24" height="24">
+                    <use xlink:href="#search" />
+                  </svg>
+                </button>
+                </form>
+              </div>
+              <div class="user-items d-flex gap-3">
+                <a href="#">
+                  <svg class="user" width="24" height="24"><use xlink:href="#user" /></svg>
+                </a>
+                <a href="#">
+                  <svg class="like" width="24" height="24"><use xlink:href="#like" /></svg>
+                </a>
+                <a href="cart.html">
+                  <svg class="shopping-bag" width="24" height="24"><use xlink:href="#shopping-bag" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <section id="billboard" class="py-5 my-5">
+      <div class="container">
+        <div class="row d-flex align-items-center position-relative">
+          <div class="col-md-3">
+            <div class="icon-box pb-5 d-flex flex-wrap align-items-center justify-content-between">
+              <div class="icon-number bg-dark-gray rounded-circle text-white d-flex justify-content-center align-items-center">
+                <span class="content-light">1</span>
+              </div>
+              <div class="icon-content">
+                <h3 class="box-title">Free Delivery</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+              </div>
+            </div>
+            <div class="icon-box pb-5 d-flex flex-wrap align-items-center  justify-content-between">
+              <div class="icon-number bg-dark-gray rounded-circle text-white d-flex justify-content-center align-items-center">
+                <span class="content-light">2</span>
+              </div>
+              <div class="icon-content">
+                <h3 class="box-title">Wide Variety</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+              </div>
+            </div>
+            <div class="icon-box pb-5 d-flex flex-wrap align-items-center  justify-content-between">
+              <div class="icon-number bg-dark-gray rounded-circle text-white d-flex justify-content-center align-items-center">
+                <span class="content-light">3</span>
+              </div>
+              <div class="icon-content">
+                <h3 class="box-title">Lanscaping</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="image-holder text-center">
+              <img src="images/single-image.png" alt="banner">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="icon-box pb-5 d-flex flex-wrap align-items-center  justify-content-between">
+              <div class="icon-number bg-dark-gray rounded-circle text-white d-flex justify-content-center align-items-center">
+                <span class="content-light">4</span>
+              </div>
+              <div class="icon-content">
+                <h3 class="box-title">Big Offers</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+              </div>
+            </div>
+            <div class="icon-box pb-5 d-flex flex-wrap align-items-center  justify-content-between">
+              <div class="icon-number bg-dark-gray rounded-circle text-white d-flex justify-content-center align-items-center">
+                <span class="content-light">5</span>
+              </div>
+              <div class="icon-content">
+                <h3 class="box-title">100% Secure Payment</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+              </div>
+            </div>
+            <div class="icon-box pb-5 d-flex flex-wrap align-items-center  justify-content-between">
+              <div class="icon-number bg-dark-gray rounded-circle text-white d-flex justify-content-center align-items-center">
+                <span class="content-light">6</span>
+              </div>
+              <div class="icon-content">
+                <h3 class="box-title">Quality Guarantee</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pattern-overlay">
+        <img src="images/pattern-overlay.png" alt="pattern" class="position-absolute">
+      </div>
+      <div class="pattern-overlay1">
+        <img src="images/pattern-overlay1.png" alt="pattern" class="position-absolute">
+      </div>
+    </section>
+
+    <section id="featured-products" class="p-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-image position-relative image-zoom link-effect">
+              <img src="images/product-item.jpg" alt="plant">
+            </div>
+            <div class="card-body position-absolute content-light p-5 bottom-0">
+              <h2 class="section-title">Colorful Indoors</h2>
+              <div class="btn-box text-uppercase">
+                <a href="#" class="text-decoration-none" data-after="Shop These"><span>Shop These</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-image position-relative image-zoom link-effect">
+              <img src="images/product-item1.jpg" alt="plant">
+            </div>
+            <div class="card-body position-absolute content-light p-5 bottom-0">
+              <h2 class="section-title">Green Landscapes</h2>
+              <div class="btn-box text-uppercase">
+                <a href="#" class="text-decoration-none" data-after="Shop These"><span>Shop These</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popular-products" class="bg-light-green py-5 container-grid position-relative overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="pattern-overlay3">
+            <img src="images/pattern-overlay3.png" alt="pattern" class="position-absolute">
+          </div>
+          <div class="card-header half-width-inner bg-transparent border-0 mb-4">
+            <div class="section-header">
+              <h3 class="sub-title">most popular</h3>
+              <h2 class="section-title">Indoor Air Purifier Plants for your Living Space</h2>
+            </div>
+            <p>Scientific research indicates that plants communicate with insects, animals, human beings and other plants in keep themselves alive and safe. Evidence also reveals that plants are telling us how to achieve health and humanity and the earth herself.</p>
+            <div class="btn-box">
+              <a href="#" class="btn-link">View all Products</a>
+            </div>
+          </div>
+          <div class="product-row row">
+            <div class="col-md-4">
+              <div class="card product-card border-0 bg-transparent border-none">
+                <div class="card-image">
+                  <img src="images/product-item2.jpg" alt="plant" class="img-fluid">
+                </div>
+                <h3 class="product-title text-center">
+                  <a href="#">Cane plants</a>
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card border-0 bg-transparent border-none">
+                <div class="card-image">
+                  <img src="images/product-item3.jpg" alt="plant" class="img-fluid">
+                </div>
+                <h3 class="product-title text-center">
+                  <a href="#">Ficus plants</a>
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card product-card border-0 bg-transparent border-none">
+                <div class="card-image">
+                  <img src="images/product-item4.jpg" alt="plant" class="img-fluid">
+                </div>
+                <h3 class="product-title text-center">
+                  <a href="#">Vinca vines</a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="subscribe" class="container-grid py-5 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row my-5 py-5">
+          <div class="subscribe-content half-width-inner">
+            <h2 class="section-title">Get a FREE Plant Care Guide by joining our Newsletter</h2>
+            <form class="subscription-form validate pt-5">
+              <div class="input-group flex-nowrap">
+                <input class="form-control bg-gray text-capitalize" type="email" name="EMAIL" placeholder="Enter your email address here" required="">
+                <button class="btn btn-medium btn-primary text-uppercase" type="submit" name="subscribe">Subscribe</button>
+              </div>
+              <div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pattern-overlay4">
+        <img src="images/pattern-overlay4.png" alt="pattern" class="position-absolute">
+      </div>
+      <div class="pattern-overlay5">
+        <img src="images/pattern-overlay5.png" alt="pattern" class="position-absolute">
+      </div>
+    </section>
+
+    <section id="recent-collections" class="bg-transparent product-position overflow-hidden">
+      <div class="row d-flex">
+        <div class="col-md-4">
+          <div class="card bg-transparent position-relative border-none image-zoom link-effect">
+            <div class="card-image">
+              <img src="images/product-item5.jpg" alt="plant">
+            </div>
+            <div class="card-body position-absolute content-light">
+              <h2 class="section-title">Colorful Indoors</h2>
+              <a href="#" class="text-decoration-none" data-after="Shop These"><span>Shop These</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-transparent position-relative border-none image-zoom link-effect">
+            <div class="card-image">
+              <img src="images/product-item6.jpg" alt="plant">
+            </div>
+            <div class="card-body position-absolute content-light">
+              <h2 class="section-title">Green Landscapes</h2>
+              <a href="#" class="text-decoration-none" data-after="Shop These"><span>Shop These</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-transparent position-relative border-none image-zoom link-effect">
+            <div class="card-image">
+              <img src="images/product-item7.jpg" alt="plant">
+            </div>
+            <div class="card-body position-absolute content-light">
+              <h2 class="section-title">Flowering Plants</h2>
+              <a href="#" class="text-decoration-none" data-after="Shop These"><span>Shop These</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest-blog" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="card-header half-width-inner bg-transparent border-0 mt-5 mb-4">
+            <div class="section-header">
+              <h2 class="section-title">Latest Blog Posts</h2>
+            </div>
+            <p>Evidence also reveals that plants are telling us how to achieve health and wholeness for humanity and the earth herself.</p>
+            <div class="btn-box">
+              <a href="#" class="btn-link text-uppercase">View all Posts</a>
+            </div>
+          </div>
+          <div class="post-grid row d-flex">
+            <div class="col-md-4">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/post-thumb-1.jpg" alt="plant" class="img-fluid">
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title my-2">
+                  <a href="#">Decorative touches for your design</a>
+                </h3>
+                <p>Sem magna ut pharetra vitae duis eu senectus sem risus. Morbi non, semper vestibulum euismod accumsan...</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/post-thumb-2.jpg" alt="plant" class="img-fluid">
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title my-2">
+                  <a href="#">Giftable scents which warms the heart</a>
+                </h3>
+                <p>Morbi non, semper vestibulum euismod accumsan. Sem magna ut pharetra vitae duis eu senectus sem risus...</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/post-thumb-3.jpg" alt="plant" class="img-fluid">
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title my-2">
+                  <a href="#">Creative ideas to make this holiday special</a>
+                </h3>
+                <p>Pharetra vitae sem magna ut duis eu senectus sem risus. Morbi non, semper vestibulum euismod accumsan ...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h3 class="sub-title">Get in Touch</h3>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="mt-3">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+          <div class="col-md-3">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <svg width="24" height="24"><use xlink:href="#phone" /></svg>
+              </div>
+              <h5 class="mb-3">Phone</h5>
+              <p class="text-muted mb-2">+1 (234) 567-890</p>
+              <p class="text-muted">Mon-Fri 9am-6pm</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <svg width="24" height="24"><use xlink:href="#email" /></svg>
+              </div>
+              <h5 class="mb-3">Email</h5>
+              <p class="text-muted mb-2">info@plantlover.com</p>
+              <p class="text-muted">Online support</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <svg width="24" height="24"><use xlink:href="#whatsapp" /></svg>
+              </div>
+              <h5 class="mb-3">WhatsApp</h5>
+              <a href="https://wa.me/1234567890" target="_blank" class="btn btn-success btn-sm mt-2">
+                <svg width="16" height="16" class="me-1"><use xlink:href="#whatsapp" /></svg>
+                Chat Now
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="contact-card text-center">
+              <div class="contact-icon">
+                <svg width="24" height="24"><use xlink:href="#location" /></svg>
+              </div>
+              <h5 class="mb-3">Location</h5>
+              <p class="text-muted mb-2">123 Plant Street</p>
+              <p class="text-muted">Garden City, GC 12345</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-5">
+                <h4 class="mb-4">Send us a Message</h4>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="name" class="form-label">Your Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="+1 (234) 567-890">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input type="text" class="form-control" id="subject" placeholder="How can we help?">
+                    </div>
+                    <div class="col-12">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
